@@ -272,6 +272,9 @@ def _keyDown(key):
         return
 
     needsShift = pyautogui.isShiftCharacter(key)
+    if key == '@': needsShift = False
+    if key == '^': needsShift = False
+    if key == ':': needsShift = False
 
     """
     # OLD CODE: The new code relies on having all keys be loaded in keyboardMapping from the start.
